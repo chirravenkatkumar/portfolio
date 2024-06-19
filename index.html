@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Importing Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Importing FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">My Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="section">
+            <h1>Welcome to My Portfolio</h1>
+        </section>
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>Some details about me. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel augue libero. Integer at elit et justo dignissim accumsan et at nunc.</p>
+        </section>
+        <section id="projects" class="section">
+            <h2>My Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>Project 1</h3>
+                    <p>Description of Project 1.</p>
+                </div>
+                <div class="project">
+                    <h3>Project 2</h3>
+                    <p>Description of Project 2.</p>
+                </div>
+                <div class="project">
+                    <h3>Project 3</h3>
+                    <p>Description of Project 3.</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <p><a href="tel:8247008203"><i class="fas fa-phone"></i> +91 8247008203</a></p>
+                <p><a href="mailto:chirravenkatkumar@gmail.com"><i class="fas fa-envelope"></i> venkatkumarchirra@gmail.com</a></p>
+                <div class="social-media-icons">
+                  <a href="https://www.instagram.com/_venkat__19" target="_blank" class="icon instagram"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/chirra-venkat-kumar-332437272?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="https://wa.me/8247008203" target="_blank" class="icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                  <a href="https://www.snapchat.com/add/the_vnkat?share_id=43SlQY4pj9o&locale=en-IN" target="_blank" class="icon snapchat"><i class="fab fa-snapchat-ghost"></i></a>
+              </div>
+            </div>
+            <form>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <textarea id="message" name="message" rows="4" placeholder="Message" required></textarea>
+                <button type="submit"><i class="fas fa-paper-plane"></i> Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>
