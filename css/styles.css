@@ -71,7 +71,7 @@ nav ul.menu li a {
     position: relative;
     width: 80%;
     max-width: 1200px;
-    overflow: hidden; /* Hide scrollbars on the container */
+    overflow: hidden; /* Hide scrollbar on the container */
     border-radius: 20px;
 }
 
@@ -232,6 +232,7 @@ footer {
     padding: 20px;
     background: transparent;
 }
+
 /* Common styles for form elements */
 form input,
 form textarea,
@@ -257,17 +258,17 @@ form button:hover {
 
 /* Specific styles for the button */
 form button {
-    background: transparent; /* Transparent background */
+    background: white; /* Transparent background */
     cursor: pointer;
-    color: white;
+    color: black;
 }
 
 form button:hover {
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white on hover */
-    color: #6d6969; /* Text color on hover */
+    background: rgba(255, 255, 255, 0.893); /* Semi-transparent white on hover */
+    color: #000000; /* Text color on hover */
 }
+
 
     .project {
         width: calc(100% - 40px);
     }
-}
