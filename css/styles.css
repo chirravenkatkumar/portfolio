@@ -84,20 +84,7 @@ ul {
     transform: scaleX(1);
 }
 
-@media (max-width: 768px) {
-    nav ul.menu1 {
-        flex-direction: row; /* Keep menu items in a row on small screens */
-        overflow-x: auto; /* Allow horizontal scrolling if needed */
-    }
 
-    nav ul.menu1 li {
-        flex: 0 0 auto; /* Items keep their natural width */
-    }
-
-    nav ul.menu1 li a {
-        padding: 10px 15px; /* Add some side padding for better spacing */
-    }
-}
 
 .section {
     padding: 60px 20px;
