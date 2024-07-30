@@ -7,7 +7,7 @@ body {
     margin: 0;
     font-family: 'Arial', sans-serif;
     color: white;
-    background-color: black;
+    background-color: rgb(53, 50, 50);
 }
 
 /* Menu Navigation Bar Styles */
@@ -117,6 +117,12 @@ ul {
 .texthead{
     position: sticky;
     top: 30px;
+    bottom: 100px;
+    font-size: 3rem;
+    padding-bottom: 50px;
+    font-family: Inter;
+    font-weight: 800;
+    overflow: hidden;
 }
 
 :root {
@@ -124,7 +130,10 @@ ul {
     --cardHeight: 68vh;
     --cardTopPadding: 1.5em;
     --cardMargin: 4vw;
-    --cardWidth: 76vw;
+    --cardWidth: 50vw;
+    --mobileCardHeight: 50vh; /* Smaller height for mobile */
+    --mobileCardWidth: 90vw; /* Full width for mobile */
+    --mobileCardMargin: 2vw; /* Smaller margin for mobile */
 }
 
 .container {
@@ -167,8 +176,8 @@ ul {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 10px 20px; /* Reduced padding for more space */
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 10px 20px;
+    background-color: rgb(131, 124, 124);
     position: absolute;
     top: 0;
     left: 0;
@@ -177,22 +186,26 @@ ul {
 
 .card-header h2 {
     margin: 0;
-    font-size: 1.2em; /* Reduced font size for more space */
+    font-size: 1.2em;
 }
 
 .card-buttons {
     display: flex;
-    gap: 10px; /* Reduced gap between buttons */
+    gap: 7px;
 }
 
 .card-button {
     padding: 5px 10px;
     border-radius: 20px;
-    background-color: #333;
-    color: white;
+    background-color: #ffffff;
+    color: rgb(6, 4, 4);
     text-decoration: none;
-    font-size: 0.8em; /* Reduced font size for buttons */
+    font-size: 0.8em;
     transition: background-color 0.3s;
+}
+
+.live-preview{
+    margin-right: 40px;
 }
 
 .card-button:hover {
@@ -218,7 +231,37 @@ ul {
     background-color: #D4AFB9;
 }
 
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    :root {
+        --cardHeight: var(--mobileCardHeight);
+        --cardWidth: var(--mobileCardWidth);
+        --cardMargin: var(--mobileCardMargin);
+    }
 
+    .card-body {
+        height: var(--cardHeight);
+        width: var(--cardWidth);
+
+    }
+
+    .card-header {
+        padding: 15px 10px;
+    }
+
+    .card-header h2 {
+        font-size: 1em;
+    }
+
+    .card-buttons {
+        gap: 3px;
+    }
+
+    .card-button {
+        font-size: 0.7em;
+        padding: 10px 8px;
+    }
+}
 
 /* Contact Section */
 .contact-info {
