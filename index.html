@@ -13,81 +13,96 @@
     <link rel="manifest" href="./images/favicon_io/site.webmanifest">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul class="menu1">
-                </li>
-                <li><a class="menu" href="#home">Home</a></li>
-                <li><a class="menu" href="#about">About</a></li>
-                <li><a class="menu" href="#projects">Projects</a></li>
-                <li><a class="menu" href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="home" class="section">
-            <h1>VENKAT KUMAR</h1>
-        </section>
-        <section id="about" class="section">
-            <h2 class="abouttxt">ABOUT ME</h2>
-            <p>I am a passionate web developer with a strong interest in both front-end and back-end development. 
-            <br>With a solid foundation in C and Java, <br>I possess a good understanding of web development technologies. <br>My true passion lies in UI/UX design, where I strive to create impactful and visually compelling user experiences. <br> I am constantly exploring new ideas and techniques to craft engaging and innovative designs that resonate with users.<p>
-         </section>
-        <section id="projects" class="section">
-            <h2 class="texthead">MY PROJECTS</h2>
-            <div class="container">
-                <ul id="cards">
-                    <li class="card" id="card1">
-                        <div class="card-body">
-                            <div class="card-header">
-                                <h2>MOVIE TICKET BOOK</h2>
-                                <div class="card-buttons">
-                                    <a href="link-to-source-code1" class="card-button">Source Code</a>
-                                    <a href="link-to-live-preview1" class="card-button live-preview">Live Preview</a>
-                                </div>
-                            </div>
-                            <img src="images/image2.jpg" alt="Card 1 Image" class="card-image">
-                        </div>
-                    </li>
-                    <li class="card" id="card2">
-                        <div class="card-body">
-                            <div class="card-header">
-                                <h2>CERTIFICATE GENERATE</h2>
-                                <div class="card-buttons">
-                                    <a href="link-to-source-code2" class="card-button">Source Code</a>
-                                    <a href="link-to-live-preview2" class="card-button live-preview">Live Preview</a>
-                                </div>
-                            </div>
-                            <img src="images/image1.png" alt="Card 2 Image" class="card-image">
-                        </div>
-                    </li>
-                </ul>
-            </div>            
-        </section>
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <div class="contact-info">
-                <p><a href="tel:8247008203"><i class="fas fa-phone"></i>+91 8247008203</a></p>
-                <p><a href="mailto:chirravenkatkumar@gmail.com"><i class="fas fa-envelope"></i>chirravenkatkumar@gmail.com</a></p>
-                <div class="social-media-icons">
-                    <a href="https://www.instagram.com/_venkat__19
-                    " target="_blank" class="icon instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/chirra-venkat-kumar-332437272?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="icon linkedin"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://wa.me/8247008203" target="_blank" class="icon whatsapp"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.snapchat.com/add/the_vnkat?share_id=43SlQY4pj9o&locale=en-IN" target="_blank" class="icon snapchat"><i class="fab fa-snapchat-ghost"></i></a>
-                </div>
-            </div>
-            <form>
-                <input type="text" id="name" name="name" placeholder="Name" required><br>
-                <input type="email" id="email" name="email" placeholder="Email" required><br>
-                <textarea id="message" name="message" rows="4" placeholder="Message" required></textarea><br>
-                <button type="submit"><i class="fas fa-paper-plane"></i> Send</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
-    </footer>
-    <script src="script.js"></script>
+  <header>
+    <div class="logo">
+      <h1>FRONT-END DEVELOPER</h1>
+    </div>
+    <div class="menu-btn" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <nav id="menu" class="hidden">
+      <a href="#about">ABOUT</a>
+      <a href="#contact">EXPERIENCE</a>
+      <a href="#skills">SKILLS</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+  
+  <main>
+    <!-- Existing sections: Intro, About, Skills, Projects, Contact -->
+    <section class="intro">
+      <h2>Welcome to My Portfolio</h2>
+      <p>I'm a passionate frontend developer creating interactive and responsive web applications.</p>
+      <div class="social-media">
+        <a href="#" class="social-icon">Facebook</a>
+        <a href="#" class="social-icon">Twitter</a>
+        <a href="#" class="social-icon">LinkedIn</a>
+      </div>
+    </section>
+    
+    <section id="about">
+      <h3>About Me</h3>
+      <p>Write something about yourself here...</p>
+    </section>
+    
+    <section id="skills">
+      <h3>Skills</h3>
+      <div class="skills-container">
+        <div class="skill">
+          <img src="html-icon.png" alt="HTML">
+          <p>HTML</p>
+        </div>
+        <div class="skill">
+          <img src="css-icon.png" alt="CSS">
+          <p>CSS</p>
+        </div>
+        <div class="skill">
+          <img src="js-icon.png" alt="JavaScript">
+          <p>JavaScript</p>
+        </div>
+      </div>
+    </section>
+    
+    <section id="projects">
+      <h3>Projects</h3>
+      <div class="project-card">
+        <h4>Project 1</h4>
+        <p>Short description of the project.</p>
+        <a href="#" class="btn">Preview</a>
+        <a href="#" class="btn">Source Code</a>
+      </div>
+      <div class="project-card">
+        <h4>Project 2</h4>
+        <p>Short description of the project.</p>
+        <a href="#" class="btn">Preview</a>
+        <a href="#" class="btn">Source Code</a>
+      </div>
+      <!-- Add more projects as needed -->
+    </section>
+    
+    <section id="contact">
+      <h3>Contact Me</h3>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+  
+  <script src="script.js"></script>
 </body>
 </html>

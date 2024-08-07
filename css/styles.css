@@ -1,386 +1,132 @@
-/* styles.css */
-
-html{
-    scroll-behavior: smooth;
-}
-body {
+body, html {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    color: white;
-    background-color: rgb(53, 50, 50);
-}
-
-/* Menu Navigation Bar Styles */
-
-header {
-    background: transparent; /* Dark background for the nav bar */
-    padding: 10px 0;
-}
-
-nav ul.menu1 {
-    list-style: none; /* Remove default list styling */
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Distribute space between items */
-    padding: 0 10px; /* Add padding to align items nicely with the edges */
-    margin: 0; /* Remove default margin */
-    width: 100%; /* Full width */
-    box-sizing: border-box; /* Include padding in the element's total width */
-}
-
-nav ul.menu1 li {
-    flex: 1; /* Each menu item takes up equal space */
-    text-align: center; /* Center the text within each item */
-}
-
-nav ul.menu1 li a {
-    text-decoration: none; /* Remove underline from links */
-    color: #fff; /* White text color */
-    font-family: "Raleway", sans-serif;
-    font-size: 18px; /* Font size */
-    display: block; /* Make the link take the full space */
-    padding: 10px 0; /* Padding inside each link for better click area */
-}
-
-
-ul {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
+    font-family: Arial, sans-serif;
   }
-  ul li {
-    color: #fff;
-    display: grid;
-    place-content: center;
-    margin: 0;
-  }
-
-.logo{
-    /* color: #0f1cdd; */
-    color: #fff;
-    cursor: pointer;
-}
-
-.menu {
-    color: #fff;
-    padding: 0.5rem;
-    position: relative;
-    text-decoration: none;
-}
-
-  .menu::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background: #fff;
-    border-radius: 5px;
-    transform: scaleX(0);
-    transition: all .5s ease;
-    bottom: 0;
-    left: 0;
-  }
-
-.menu:hover::before {
-    transform: scaleX(1);
-}
-
-@media (max-width: 768px) {
-    nav ul.menu1 {
-        flex-direction: row; /* Keep menu items in a row on small screens */
-        overflow-x: auto; /* Allow horizontal scrolling if needed */
-    }
-
-    nav ul.menu1 li {
-        flex: 0 0 auto; /* Items keep their natural width */
-    }
-
-    nav ul.menu1 li a {
-        padding: 10px 15px; /* Add some side padding for better spacing */
-    }
-}
-.section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.section h1 {
-    font-size: 5rem;
-    margin-bottom: 20px;
-    padding-bottom: 300px;
-    padding-top: 180px;
-    font-family: Inter;
-    font-weight: 800;
-}
-
-/*cards  From ......Here*/
-
-.texthead{
-    position: sticky;
-    top: 30px;
-    bottom: 100px;
-    font-size: 3rem;
-    padding-bottom: 50px;
-    font-family: Inter;
-    font-weight: 800;
-    overflow: hidden;
-}
-
-:root {
-    --cards: 4;
-    --cardHeight: 68vh;
-    --cardTopPadding: 1.5em;
-    --cardMargin: 4vw;
-    --cardWidth: 50vw;
-    --mobileCardHeight: 50vh; /* Smaller height for mobile */
-    --mobileCardWidth: 90vw; /* Full width for mobile */
-    --mobileCardMargin: 2vw; /* Smaller margin for mobile */
-}
-
-.container {
-    width: 90%;
-    margin: 0 auto;
-}
-
-#cards {
-    list-style: none;
-    padding-left: 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(var(--cards), var(--cardHeight));
-    gap: var(--cardMargin);
-    padding-bottom: calc(var(--cards) * var(--cardTopPadding));
-    margin-bottom: var(--cardMargin);
-}
-
-.card {
-    position: sticky;
-    top: 100px;
-    padding-top: calc(var(--index) * var(--cardTopPadding));
-}
-
-.card-body {
-    box-sizing: border-box;
-    border-radius: 50px;
-    box-shadow: 0 0 30px 0 rgba(0,0,0,0.3);
-    height: var(--cardHeight);
-    width: var(--cardWidth);
-    display: flex;
-    flex-direction: column;
-    transition: all 0.5s;
-    overflow: hidden;
-    position: relative;
-}
-
-.card-header {
+  
+  header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     padding: 10px 20px;
-    background-color: rgb(131, 124, 124);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
-
-.card-header h2 {
+    background-color: #333;
+    color: white;
+  }
+  
+  .logo h1 {
     margin: 0;
-    font-size: 1.2em;
-}
-
-.card-buttons {
-    display: flex;
-    gap: 7px;
-}
-
-.card-button {
-    padding: 5px 10px;
-    border-radius: 20px;
-    background-color: #ffffff;
-    color: rgb(6, 4, 4);
-    text-decoration: none;
-    font-size: 0.8em;
-    transition: background-color 0.3s;
-}
-
-.live-preview{
-    margin-right: 40px;
-}
-
-.card-button:hover {
-    background-color: #555;
-}
-
-.card-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-#card1 .card-body {
-    background-color: #52B2CF;
-}
-#card2 .card-body {
-    background-color: #E5A36F;
-}
-#card3 .card-body {
-    background-color: #9CADCE;
-}
-#card4 .card-body {
-    background-color: #D4AFB9;
-}
-
-/* Media Query for Mobile Devices */
-@media (max-width: 768px) {
-    :root {
-        --cardHeight: var(--mobileCardHeight);
-        --cardWidth: var(--mobileCardWidth);
-        --cardMargin: var(--mobileCardMargin);
-    }
-
-    .card-body {
-        height: var(--cardHeight);
-        width: var(--cardWidth);
-
-    }
-
-    .card-header {
-        padding: 15px 10px;
-    }
-
-    .card-header h2 {
-        font-size: 1em;
-    }
-
-    .card-buttons {
-        gap: 3px;
-    }
-
-    .card-button {
-        font-size: 0.7em;
-        padding: 10px 8px;
-    }
-}
-
-/* Contact Section */
-.contact-info {
-    display: flex;                /* Use flexbox for layout */
-    flex-direction: column;       /* Stack items vertically */
-    align-items: center;          /* Center items horizontally */
-    justify-content: center;      /* Center items vertically (in case of extra space) */
-    text-align: center;           /* Center-align text within the flex items */
-    margin-top: 20px;             /* Add some space above the contact info */
-}
-
-.contact-info p {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-.contact-info p a {
-    color: #fff;
-    text-decoration: none;
-    display: flex;               /* Align icon and text horizontally */
-    align-items: center;         /* Center icon and text vertically */
-    justify-content: center;     /* Center the entire link block */
-}
-
-.contact-info p a i {
-    margin-right: 10px;          /* Space between icon and text */
-}
-
-/* Social Media Icons */
-.social-media-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.social-media-icons .icon {
-    color: #fff; /* Default light white color */
-    font-size: 24px; /* Icon size */
-    transition: color 0.3s, transform 0.3s; /* Smooth transition for color and transform */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px; /* Uniform icon container width */
-    height: 50px; /* Uniform icon container height */
-    border-radius: 50%; /* Round icon container */
-    background: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
-    text-decoration: none;
-}
-
-.social-media-icons .icon:hover {
-    transform: scale(1.1); /* Slightly enlarge the icon on hover */
-}
-
-/* Hover Colors */
-.social-media-icons .icon.instagram:hover {
-    color: #E4405F; /* Instagram original color */
-}
-
-.social-media-icons .icon.linkedin:hover {
-    color: #0077B5; /* LinkedIn original color */
-}
-
-.social-media-icons .icon.whatsapp:hover {
-    color: #25D366; /* WhatsApp original color */
-}
-
-.social-media-icons .icon.snapchat:hover {
-    color: #FFFC00; /* Snapchat original color */
-}
-
-/* Simple tap animation */
-.social-media-icons .icon:active {
-    transform: scale(0.95); /* Slightly shrink the icon when tapped */
-}
-
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: transparent;
-}
-
-/* Common styles for form elements */
-form input,
-form textarea,
-form button {
-    margin-top: 10px;
-    padding: 10px;
-    width: 80%;
-    max-width: 400px;
-    border: 2px solid white; /* White border */
-    border-radius: 10px; /* Rounded corners */
-    background: transparent; /* Transparent background */
-    color: white; /* Text color */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
-}
-
-/* Hover effect for form elements */
-form input:hover,
-form textarea:hover,
-form button:hover {
-    border-color: #6d6969; /* Darker border on hover */
-    box-shadow: 0 0 10px rgba(109, 105, 105, 0.5); /* Box shadow on hover */
-}
-
-/* Specific styles for the button */
-form button {
-    background: white; /* Transparent background */
+  }
+  
+  .menu-btn {
     cursor: pointer;
-    color: black;
-}
-
-form button:hover {
-    background: rgba(255, 255, 255, 0.893); /* Semi-transparent white on hover */
-    color: #000000; /* Text color on hover */
-}
-
-
-    .project {
-        width: calc(100% - 40px);
-    }
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .menu-btn .bar {
+    width: 25px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.74);
+  }
+  
+  nav.hidden {
+    display: none;
+  }
+  
+  nav {
+    position: absolute;
+    top:40px;
+    left: 0%;
+    width: 100%;
+    height: 26%;
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  nav a {
+    display: block;
+    top: 0px;
+    gap: 15px;
+    margin: 20px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .intro h2 {
+    font-size: 2em;
+    margin: 0;
+  }
+  
+  .intro p {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  .social-media {
+    margin: 20px 0;
+  }
+  
+  .social-icon {
+    margin-right: 10px;
+    color: grey;
+    text-decoration: none;
+  }
+  
+  #skills .skills-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .skill {
+    text-align: center;
+  }
+  
+  .skill img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .project-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .project-card h4 {
+    margin: 0 0 10px 0;
+  }
+  
+  .btn {
+    margin-right: 10px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+  }
+  
+  form label {
+    margin: 10px 0 5px 0;
+  }
+  
+  form input, form textarea, form button {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  form button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
