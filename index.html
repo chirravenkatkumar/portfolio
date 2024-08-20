@@ -3,106 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/fonts.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Venkat Kumar's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon_io/favicon-16x16.png">
     <link rel="manifest" href="./images/favicon_io/site.webmanifest">
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <h1>FRONT-END DEVELOPER</h1>
+    <div class="glass-container">
+        <div class="glass-menu-bar">
+            <nav>
+                <ul>
+                    <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                    <li><a href="#about" onclick="showSection('about')">About</a></li>
+                    <li><a href="#projects" onclick="showSection('projects')">Projects</a></li>
+                    <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="glass-content">
+            <section id="home">
+                <h1>Welcome Venkat Kumar</h1>
+            </section>
+
+            <section id="about" class="hidden-section">
+                <h2>About</h2>
+                <div class="study-timeline">
+                    <div class="timeline">
+                        <div class="event" data-year="10th Standard">
+                            <p>Completed 10th Standard</p>
+                        </div>
+                        <div class="event" data-year="Current">
+                            <p>Currently pursuing [Your Current Education]</p>
+                        </div>
+                    </div>
+                    <div class="skills">
+                        <h3>Skills</h3>
+                        <img src="path/to/logo1.png" alt="Skill 1">
+                        <img src="path/to/logo2.png" alt="Skill 2">
+                        <!-- Add more logos as needed -->
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2>Projects</h2>
+                <div class="project-cards">
+                    <div class="project-card">
+                        <img src="./project1.png" alt="Project Image 1" class="project-image">
+                        <div class="project-text">
+                            <h3>College POrtal</h3>
+                        </div>
+                        <div class="project-card-top">
+                            <a href="https://github.com/chirravenkatkumar/College-Certificates-Website" class="glass-button" target="_blank">Source Code</a>
+                            <a href="https://college-dashboard-8k8e.onrender.com/" class="glass-button" target="_blank">Preview</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <img src="./project1.png" alt="Project Image 2" class="project-image">
+                        <div class="project-text">
+                            <h3>Project Title 2</h3>
+                        </div>
+                        <div class="project-card-top">
+                            <a href="link-to-source-code-2" class="glass-button" target="_blank">Source Code</a>
+                            <a href="link-to-preview-2" class="glass-button" target="_blank">Preview</a>
+                        </div>
+                    </div>
+                    <!-- Add more project cards as needed -->
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <div class="contact-form-container">
+                    <form class="glass-form">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+
+                        <button type="submit" class="glass-button">Send</button>
+                    </form>
+                </div>
+                <div class="map-container">
+                    <!-- Replace the placeholder with an actual map iframe or map component -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.867555424803!2d-122.41941818468124!3d37.77492977975923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808b12345678%3A0x12ab34cd56ef7890!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1657100000000!5m2!1sen!2sus" 
+                            width="100%" 
+                            height="300" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
+        </div>
+
+        <div class="glass-footer">
+            <div class="social-links">
+                <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.whatsapp.com" target="_blank" class="social-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.github.com" target="_blank" class="social-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            
+            <p>&copy; Venkat Kumar All Rights Reserved 2025 | Enjoy</p>
+        </div>        
     </div>
-    <div class="menu-btn" onclick="toggleMenu()">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
-    <nav id="menu" class="hidden">
-      <a href="#about">ABOUT</a>
-      <a href="#contact">EXPERIENCE</a>
-      <a href="#skills">SKILLS</a>
-      <a href="#projects">PROJECTS</a>
-      <a href="#contact">CONTACT</a>
-    </nav>
-  </header>
-  
-  <main>
-    <!-- Existing sections: Intro, About, Skills, Projects, Contact -->
-    <section class="intro">
-      <h2>Welcome to My Portfolio</h2>
-      <p>I'm a passionate frontend developer creating interactive and responsive web applications.</p>
-      <div class="social-media">
-        <a href="#" class="social-icon">Facebook</a>
-        <a href="#" class="social-icon">Twitter</a>
-        <a href="#" class="social-icon">LinkedIn</a>
-      </div>
-    </section>
-    
-    <section id="about">
-      <h3>About Me</h3>
-      <p>Write something about yourself here...</p>
-    </section>
-    
-    <section id="skills">
-      <h3>Skills</h3>
-      <div class="skills-container">
-        <div class="skill">
-          <img src="html-icon.png" alt="HTML">
-          <p>HTML</p>
-        </div>
-        <div class="skill">
-          <img src="css-icon.png" alt="CSS">
-          <p>CSS</p>
-        </div>
-        <div class="skill">
-          <img src="js-icon.png" alt="JavaScript">
-          <p>JavaScript</p>
-        </div>
-      </div>
-    </section>
-    
-    <section id="projects">
-      <h3>Projects</h3>
-      <div class="project-card">
-        <h4>Project 1</h4>
-        <p>Short description of the project.</p>
-        <a href="#" class="btn">Preview</a>
-        <a href="#" class="btn">Source Code</a>
-      </div>
-      <div class="project-card">
-        <h4>Project 2</h4>
-        <p>Short description of the project.</p>
-        <a href="#" class="btn">Preview</a>
-        <a href="#" class="btn">Source Code</a>
-      </div>
-      <!-- Add more projects as needed -->
-    </section>
-    
-    <section id="contact">
-      <h3>Contact Me</h3>
-      <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="subject">Subject:</label>
-        <input type="text" id="subject" name="subject" required>
-        
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-        
-        <button type="submit">Send</button>
-      </form>
-    </section>
-  </main>
-  
-  <script src="script.js"></script>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.glass-content section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        // Show home section by default
+        showSection('home');
+    </script>
 </body>
 </html>
